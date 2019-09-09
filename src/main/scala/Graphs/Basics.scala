@@ -98,6 +98,9 @@ object Basics extends App {
     }
   )
 
+  trait T
+  case class C() extends T
+
   graphWithMergeAndBalance.run()  // Number of elements going through Sink1 & Sink2 are almost equal at every point of time
   // Number of elements going through sink1 & sink2 are balanced
   // Balance Graph: Takes 2 sources emitting at very different speeds and evens out the rate of production of the
