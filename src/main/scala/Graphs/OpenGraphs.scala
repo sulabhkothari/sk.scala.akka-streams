@@ -61,7 +61,7 @@ object OpenGraphs extends App {
   val incrementer = Flow[Int].map(_ + 1)
   val mulitplier: Flow[Int, Int, NotUsed] = Flow[Int].map(_ * 10)
 
-  val flowGraph = Flow.fromGraph(
+  val flowGraph: Flow[Int, Int, NotUsed] = Flow.fromGraph(
     GraphDSL.create() { implicit builder =>
       import GraphDSL.Implicits._
 
